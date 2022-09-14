@@ -13,5 +13,10 @@
 	<li><a th:href="@{/normal}">通常ユーザー専用</a></li>
 	<li><a th:href="@{/admin}">管理者ユーザー専用</a></li>
 </ul>
+<form th:action="@{/logout}" method="post">
+	<p>
+		<input type="submit" value="ログアウト">
+	</p>
+</form>
 </body>
 </html>
