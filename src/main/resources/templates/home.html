@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Home</h1>
+<hr>
+<ul>
+	<li><a th:href="@{/loginUser}">ログイン中のユーザー専用</a></li>
+	<li><a th:href="@{/normal}">通常ユーザー専用</a></li>
+	<li><a th:href="@{/admin}">管理者ユーザー専用</a></li>
+</ul>
+</body>
+</html>

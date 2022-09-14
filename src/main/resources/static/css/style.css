@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body {
+	background: whitesmoke;
+	text-align: center;
+}
+
+ul {
+	display: inline-block;
+	text-align: left;
+}
