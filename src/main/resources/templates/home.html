@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="UTF-8">
 <title>Home</title>
@@ -13,10 +14,16 @@
 	<li><a th:href="@{/normal}">通常ユーザー専用</a></li>
 	<li><a th:href="@{/admin}">管理者ユーザー専用</a></li>
 </ul>
-<form th:action="@{/logout}" method="post">
-	<p>
-		<input type="submit" value="ログアウト">
+
+<th:block sec:authorize="authenticated">
+	<p>ログイン中: 
+	   <span sec:authentication="principal.name"></span>
 	</p>
-</form>
+	<form th:action="@{/logout}" method="post">
+		<p>
+			<input type="submit" value="ログアウト">
+		</p>
+	</form>
+</th:block>
 </body>
 </html>
